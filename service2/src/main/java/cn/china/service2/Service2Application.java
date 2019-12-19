@@ -1,7 +1,6 @@
-package cn.china.service;
+package cn.china.service2;
 
 import entity.Student;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,9 +16,7 @@ import service.StudentService;
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 @ComponentScan("service")
 @RestController
-//@MapperScan("mapper")
-public class ServiceApplication {
-
+public class Service2Application {
     @Autowired
     StudentService ss;
 
@@ -27,9 +24,8 @@ public class ServiceApplication {
     public Student getInfo(){
         return ss.getInfo();
     }
-
     public static void main(String[] args) {
-        SpringApplication.run(ServiceApplication.class, args);
+        SpringApplication.run(Service2Application.class, args);
     }
 
 }

@@ -3,17 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <!--就是指向当前的父级,这样就是父级就是能使用它-->
         <groupId>cn.China</groupId>
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>cn.Chian</groupId>
-    <artifactId>web</artifactId>
+    <groupId>cn.china</groupId>
+    <artifactId>service2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>web</name>
+    <name>service2</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -43,26 +42,12 @@
             </exclusions>
         </dependency>
 
-        <!--就是要使用服务entity，继承就是导入service，service导入dao， dao中导入entity-->
-        <dependency>
-            <groupId>cn.China</groupId>
-            <artifactId>service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <!--项目启动错误，解决方法-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jetty</artifactId>
-        </dependency>
-
+        <!--导入dao层的项目-->
         <dependency>
             <groupId>cn.China</groupId>
             <artifactId>dao</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
-
     </dependencies>
 
     <build>

@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="web:war exploded">
-    <output-path>$PROJECT_DIR$/web/target/web-0.0.1-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="service2:war exploded">
+    <output-path>$PROJECT_DIR$/service2/target/service2-0.0.1-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>web</module>
+        <module>service2</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="web" />
+          <element id="module-output" name="service2" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE" />
@@ -39,37 +39,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.8.RELEASE" />
-          <element id="archive" name="service-0.0.1-SNAPSHOT.jar">
-            <element id="module-output" name="service" />
-          </element>
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-jetty:1.5.3.RELEASE" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-servlets:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-continuation:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-http:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-util:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-io:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-webapp:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-xml:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-servlet:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-security:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-server:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:websocket-server:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:websocket-common:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:websocket-api:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:websocket-client:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-client:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:websocket-servlet:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:javax-websocket-server-impl:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-annotations:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-plus:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.2" />
-          <element id="library" level="project" name="Maven: org.ow2.asm:asm:5.1" />
-          <element id="library" level="project" name="Maven: org.ow2.asm:asm-commons:5.1" />
-          <element id="library" level="project" name="Maven: org.ow2.asm:asm-tree:5.1" />
-          <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:javax-websocket-client-impl:9.4.4.v20170414" />
-          <element id="library" level="project" name="Maven: javax.websocket:javax.websocket-api:1.0" />
-          <element id="library" level="project" name="Maven: org.mortbay.jasper:apache-el:8.0.33" />
           <element id="archive" name="dao-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="dao" />
           </element>
@@ -177,13 +146,12 @@
           <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.4.0" />
           <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy:2.4.10" />
-          <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-starter-ribbon:unknown" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/web/target/web-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/service2/target/service2-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="web/web/Web" />
+      <element id="javaee-facet-resources" facet="service2/web/Web" />
     </root>
   </artifact>
 </component>
