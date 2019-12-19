@@ -104,11 +104,11 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <!--ribbon负载均衡-->
+        <!--&lt;!&ndash;ribbon负载均衡&ndash;&gt;
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
+        </dependency>-->
 
 
     </dependencies>
