@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletResponse;
+
 //@SpringBootApplication
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 @EnableDiscoveryClient//就是发布以来让他发现,就是自己的发现自己I是注册中心,
@@ -42,7 +44,8 @@ public class WebApplication {
     }
 
     @RequestMapping(value="/getinfo",produces = "application/json;charset=UTF-8")
-    public Student myGet(){
+    public Student myGet(HttpServletResponse res){
+        res.setHeader("Access-Control-Allow-Origin", "*");
         ServiceInstance serviceInstance = loadBalancerClient.choose("provider");
         String url = String.format("http://%s:%s",serviceInstance.getHost(),serviceInstance.getPort())+"/getInfo";
 
