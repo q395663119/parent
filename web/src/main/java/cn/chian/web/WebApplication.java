@@ -21,6 +21,8 @@ import org.springframework.web.client.RestTemplate;
 import javax.servlet.http.HttpServletResponse;
 
 //@SpringBootApplication
+
+//不访问数据库的注解
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 @EnableDiscoveryClient//就是发布以来让他发现,就是自己的发现自己I是注册中心,
 @RestController
@@ -51,6 +53,12 @@ public class WebApplication {
 
         Student stu = rest.getForObject("http://provider/getInfo",Student.class);
         return stu;
+    }
+
+    @RequestMapping(value="/insert",produces = "application/json;charset=UTF-8")
+    public int insert(HttpServletResponse res){
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        return rest.getForObject("http://provider/insert",Integer.class);
     }
 
     public static void main(String[] args) {
